@@ -33,7 +33,7 @@ local Window = WindUI:CreateWindow({
 })
 
 local Tabs = {
-    Main = Window:Tab({ Title = "Main", Icon = icons.bacon, Desc = "BThanhLGBT" }),
+    Main = Window:Tab({ Title = "Main", Icon = icon.bacon, Desc = "BThanhLGBT" }),
 }
 
 Window:SelectTab(1)
@@ -55,7 +55,7 @@ Tabs.Main:Toggle({
       if cid.f then 
         while cid.f do
           game:GetService("ReplicatedStorage"):WaitForChild("SPAWNOWNER"):FireServer()
-          wait(0.69)
+          wait()
         end  
       end
     end  
@@ -69,8 +69,18 @@ Tabs.Main:Toggle({
       if cid.a then 
         while cid.a do
           game:GetService("ReplicatedStorage"):WaitForChild("A8"):FireServer()
-          wait(0.1)
+          wait()
         end  
       end
     end  
+})
+
+Tabs.Main:Button({
+    Title = "Summon Balls",
+    Desc = "Poor Kids Gonna Be Grateful To You XD",
+    Callback = function()
+      game:GetService("ReplicatedStorage").BUYSUIRYUBALL:FireServer()
+      game:GetService("ReplicatedStorage").BUYJUNBALL:FireServer()
+      game:GetService("ReplicatedStorage").BUYKRATOSBALL:FireServer()
+      end
 })
