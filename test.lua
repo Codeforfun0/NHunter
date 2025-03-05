@@ -1,4 +1,3 @@
---Cid Cid Cid
 function getopsize()
     local screenSize = workspace.CurrentCamera.ViewportSize
     if screenSize.X <= 720 then
@@ -56,6 +55,7 @@ Tabs.Main:Toggle({
       if cid.f then 
         while cid.f do
           game:GetService("ReplicatedStorage"):WaitForChild("SPAWNOWNER"):FireServer()
+          wait(0.69)
         end  
       end
     end  
@@ -69,6 +69,7 @@ Tabs.Main:Toggle({
       if cid.a then 
         while cid.a do
           game:GetService("ReplicatedStorage"):WaitForChild("A8"):FireServer()
+          wait(0.1)
         end  
       end
     end  
