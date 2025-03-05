@@ -33,7 +33,7 @@ local Window = WindUI:CreateWindow({
 })
 
 local Tabs = {
-    Main = Window:Tab({ Title = "Main", Icon = icon.bacon, Desc = "BThanhLGBT" }),
+    Main = Window:Tab({ Title = "Main", Icon = icons.bacon, Desc = "BThanhLGBT" }),
 }
 
 Window:SelectTab(1)
